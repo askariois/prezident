@@ -1,0 +1,204 @@
+/* ALL */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.all__heading {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 300;
+}
+
+.all__heading::after {
+    content: '';
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100vw;
+    right: 0;
+    top: 0;
+    background: #103550
+}
+
+
+/* ALL */
+
+
+/* header */
+
+header {
+    padding: 25px 0 30px 0;
+    font-weight: 300;
+}
+
+header img {
+    width: 100%;
+    padding-right: 20px;
+}
+
+.header__menu a {
+    font-size: 17px;
+    color: black;
+    margin-right: 20px;
+}
+
+.header__time {
+    margin: 0 20px 0 45px;
+}
+
+.header__time--hour {
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.header__callback a {
+    font-size: 12px;
+    padding: 8px 30px;
+    border: 0.5px solid #4F4C4C;
+    color: #000000;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.header__language {
+    margin-left: 23px;
+    border: 0.5px solid #4F4C4C;
+    padding: 2px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* header */
+
+
+/* slide */
+
+.slider__quote h6 {
+    margin-top: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.slider__quote h6::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: #103550;
+    margin-top: 10px;
+}
+
+.slide__title {
+    margin-top: 45px;
+    background-color: #DDE4E9;
+    padding: 20px 25px;
+}
+
+.slide__title h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 0;
+    color: #103550;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.slide__title--bold {
+    font-weight: 500;
+}
+
+.slide__title--regular {
+    font-weight: 300;
+}
+
+.slide__desc p {
+    margin: 20px 0 0 0;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 19px;
+    color: #4D4747;
+}
+
+.slide__button {
+    margin-top: 55px;
+}
+
+.slide__button--signup {
+    position: relative;
+    padding: 35px;
+}
+
+.slide__button--signup::before {
+    content: '';
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100vw;
+    background-color: #FDD5B1;
+}
+
+.slide__button--signup::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 255px;
+    height: 5px;
+    background-color: #103550;
+    margin-top: 10px;
+}
+
+.slide__button a {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.slide__button--download {
+    margin-right: 30px;
+}
+
+
+/* slide */
+
+
+/* about */
+
+.about {
+    margin-top: 100px;
+}
+
+.all__heading {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+
+/* about */
