@@ -39,7 +39,11 @@ ul {
 }
 
 .about,
-.gallery {
+.gallery,
+.layout,
+.visaul,
+.project,
+.build {
     margin-top: 100px;
 }
 
@@ -231,11 +235,13 @@ header img {
     font-weight: 400;
 }
 
-.tab {
+.layout .tab,
+.about .tab {
     display: none;
 }
 
-.tab.is-active {
+.layout .tab.is-active,
+.about .tab.is-active {
     display: block;
 }
 
@@ -388,3 +394,31 @@ header img {
 
 
 /* gallery */
+
+
+/* layout */
+
+
+/* layout */
+
+
+/* visaul */
+
+.visaul img {
+    margin-top: -15px;
+    z-index: -2;
+    position: relative;
+}
+
+
+/* visaul */
+
+
+/* project  */
+
+.project img {
+    margin-top: 40px;
+}
+
+
+/* project */
