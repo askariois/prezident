@@ -43,7 +43,8 @@ ul {
 .layout,
 .visaul,
 .project,
-.build {
+.build,
+.callback {
     margin-top: 100px;
 }
 
@@ -223,14 +224,15 @@ header img {
     border-bottom: 5px solid #103550;
 }
 
-.tabs-nav__item {
+.tabs-nav__item a {
     cursor: pointer;
     padding: 37px 32px 29px 37px;
     font-size: 16px;
     font-weight: 300;
+    color: #000000;
 }
 
-.tabs-nav__item.is-active {
+.tabs-nav__item a.active {
     background-color: #FDD5B1;
     font-weight: 400;
 }
@@ -240,8 +242,8 @@ header img {
     display: none;
 }
 
-.layout .tab.is-active,
-.about .tab.is-active {
+.layout .tab.active,
+.about .tab.active {
     display: block;
 }
 
@@ -398,6 +400,75 @@ header img {
 
 /* layout */
 
+.layout-nav {
+    margin-top: 60px;
+}
+
+.layout__room--img img {
+    width: 100%;
+    height: auto;
+}
+
+.layout__room--img {
+    padding: 90px 40px;
+    background: #E6E7E8;
+    height: 100%;
+}
+
+.layout__room--desc {
+    padding: 51px 54px 34px 57px;
+    border-top: 5px solid #103550;
+}
+
+.layout__room {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.layout__room--number {
+    font-weight: 300;
+    font-size: 35px;
+    margin: 40px 0;
+    line-height: 47px;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.layout__room--square {
+    margin-right: 130px;
+    margin-top: 30px;
+}
+
+.layout__room--square p {
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.layout__room--square span {
+    display: block;
+    font-weight: 500;
+}
+
+.layout__room--desc hr {
+    width: 70%;
+    margin-left: 0;
+    margin: 44px 0 26px 0;
+}
+
+.layout__room-mini img {
+    padding: 28px 17px;
+}
+
+.layout__room-mini img.active {
+    background: #FDD5B1;
+}
+
+.layout__room-mini h6 {
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+}
+
 
 /* layout */
 
@@ -420,5 +491,154 @@ header img {
     margin-top: 40px;
 }
 
+.project__block {
+    margin-top: 100px;
+}
+
+.project__block h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    padding: 10px 0;
+    background: #103550;
+    text-align: center;
+    color: white;
+}
+
+.project__block--img {
+    position: relative;
+}
+
+.project__block--sale {
+    position: absolute;
+}
+
+.project__block--sale {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 300;
+    padding: 20px 40px;
+    letter-spacing: 0.01em;
+    background: rgba(0, 0, 0, 0.25);
+}
+
 
 /* project */
+
+
+/* build */
+
+.build__block {
+    margin-top: 71px;
+}
+
+.build__block--filter a {
+    display: block;
+    background: #FFFFFF;
+    border: 0.5px solid #C2B7B7;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #000000;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.build__block--img {
+    position: relative;
+}
+
+.build__block--date {
+    position: absolute;
+    bottom: 0;
+    padding: 30px 84px;
+    background: rgba(27, 25, 25, 0.5);
+    color: #ffffff;
+    font-weight: 300;
+}
+
+
+/* build */
+
+
+/* callback */
+
+.callback {
+    background-image: url('../img/callback_bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+}
+
+.callback__teleg p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 0 0 16px;
+}
+
+.callback__form--input {
+    margin: 60px 10px 24px 10px;
+    padding: 17px 32px;
+    width: 100%;
+    border: 0;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.callback__form--btn {
+    width: 97%;
+    margin: 0 10px;
+    padding: 15px 0;
+    border: 0;
+    background: #103550;
+    color: white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* callback */
+
+
+/* footer */
+
+footer {
+    background-color: #103550;
+    padding: 80px 0 120px 0;
+    color: white;
+}
+
+footer h6 {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+}
+
+footer span {
+    font-size: 14px;
+}
+
+.footer__btn {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border: 0;
+    padding: 20px 0;
+}
+
+.footer__copyright {
+    margin-top: 54px;
+}
+
+
+/* footer */
