@@ -355,7 +355,7 @@ header img {
 }
 
 .gallery__block {
-    padding: 20px;
+    padding: 10px;
 }
 
 .gallery__block img {
@@ -457,7 +457,7 @@ header img {
 }
 
 .layout__room--desc {
-    padding: 51px 54px 34px 57px;
+    padding: 51px 54px 150px 57px;
     border-top: 5px solid #103550;
 }
 
@@ -501,6 +501,7 @@ header img {
 
 .layout__room-mini img.active {
     background: #FDD5B1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .layout__room-mini h6 {
@@ -508,6 +509,41 @@ header img {
     font-weight: 300;
     text-align: center;
     margin-top: 20px;
+}
+
+.layout__room--flat {
+    position: relative;
+}
+
+.mini-tabs {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+}
+
+.mini-tabs li {
+    width: 20%;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.mini-tabs img {
+    padding: 28px 17px 16px 17px;
+}
+
+.mini-tabs h6 {
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mini-tabs a.active img {
+    display: block;
+    background: #FDD5B1;
+    padding: 28px 16px 16px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
