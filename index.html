@@ -11,26 +11,33 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
 
-<body>
+<body id="header">
 
     <!-- header -->
-    <header>
+    <header class="header">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-6">
                     <a href="https://alfa-stroy.kg/">
                         <img src="img/logo.svg" alt="Логотип">
                     </a>
                 </div>
-                <div class="col-lg-10 d-flex justify-content-end align-items-center">
+                <div class="col-lg-10 col-6 d-flex justify-content-end align-items-center">
+                    <!-- mobile menu -->
+                    <div class="header_burger">
+                        <span></span>
+                    </div>
+                    <!-- mobile menu -->
                     <ul class="d-flex header__menu">
-                        <li><a href="#">Главная                     </a></li>
-                        <li><a href="#">Преимущества</a></li>
-                        <li><a href="#">Планировка</a></li>
+                        <li><a href="#header">Главная                     </a></li>
+                        <li><a href="#about">Преимущества</a></li>
+                        <li><a href="#layout">Планировка</a></li>
                         <li><a href="#">Рассрочка</a></li>
                     </ul>
                     <div class="header__time">
@@ -38,7 +45,7 @@
                         <span class="header__time--hour">9:00-19:00</span>
                     </div>
                     <div class="header__callback">
-                        <a href="#"> Заказать звонок</a>
+                        <a href="#" class="b24-web-form-popup-btn-7"> Заказать звонок</a>
                     </div>
                     <div class="header__language">
                         РУ
@@ -66,8 +73,8 @@
                         <p>Жилой дом President Palace — это новый подход к строительству, сочетание современных технологий и умных решений для вашего комфорта и безопасности. <br> С любовью к smart-решениям и родному городу!</p>
                     </div>
                     <div class="slide__button d-flex justify-content-between align-items-center">
-                        <a href="#" class="slide__button--signup">Записаться <img src="img/sign_icon.svg" alt=""></a>
-                        <a href="#" class="slide__button--download"><img src="img/download_icon.svg" alt=""> скачать рабочий альбом </a>
+                        <a href="#" class="slide__button--signup b24-web-form-popup-btn-7">Записаться <img src="img/sign_icon.svg" alt=""></a>
+                        <a href="img/work_albom.pdf" class="slide__button--download" target="_blank"><img src="img/download_icon.svg" alt=""> скачать рабочий альбом </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -81,9 +88,9 @@
 
 
     <!-- about -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-baseline">
+            <div class="about__mob d-flex justify-content-between align-items-baseline">
                 <div class="all__heading">
                     О проекте
                 </div>
@@ -118,7 +125,7 @@
                                 <p class="mb-0 mr-2">этажа бизнес-пространства</p>
                             </div>
                             <div class="tabs__content--btn">
-                                <a href="#">Купить квартиру</a>
+                                <a href="#about" class="b24-web-form-popup-btn-7">Купить квартиру</a>
                             </div>
                         </div>
                     </div>
@@ -142,18 +149,27 @@
             <div class="all__heading">
                 галерея комплекса
             </div>
-            <div class="gallery__sl">
-                <div class="gallery__block">
-                    <img src="img/gal1.png" alt="">
+            <div class="gallery__sl popup-gallery">
+                <div class="gallery__block ">
+                    <a href="img/gal1.png" class="popup-link popup">
+                        <img src="img/gal1.png" alt="1">
+                    </a>
                 </div>
                 <div class="gallery__block">
-                    <img src="img/gal2.png" alt="">
+                    <a href="img/gal2.png" class="popup-link popup">
+                        <img src="img/gal2.png" alt="2">
+                    </a>
+
                 </div>
                 <div class="gallery__block">
-                    <img src="img/gal3.png" alt="">
+                    <a href="img/gal3.png" class="popup-link popup">
+                        <img src="img/gal3.png" alt="3">
+                    </a>
                 </div>
                 <div class="gallery__block">
-                    <img src="img/gal1.png" alt="">
+                    <a href="img/gal1.png" class="popup-link popup">
+                        <img src="img/gal1.png" alt="4">
+                    </a>
                 </div>
             </div>
         </div>
@@ -163,7 +179,7 @@
 
 
     <!-- layout -->
-    <section class="layout">
+    <section class="layout" id="layout">
         <div class="container">
             <div class="all__heading">
                 типы планировок
@@ -183,7 +199,7 @@
                 <div class="tab-pane fade show active layout__room--flat" id="room1" role="tabpanel" aria-labelledby="pills-home-tab">
 
                     <div class="tab-content">
-                        <div id="room_1_2" class="tab-pane fade">
+                        <div id="room_1_2" class="tab-pane in active">
                             <div class="row no-gutters layout__room">
                                 <div class="col-lg-7">
                                     <div class="layout__room--desc">
@@ -223,12 +239,14 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="d-flex align-items-center layout__room--img">
-                                        <img src="img/layout_1_2.png" alt="" class="w-100">
+                                        <a href="img/layout_1_2.png" class="image-popup-vertical-fit">
+                                            <img src="img/layout_1_2.png" alt="" class="w-100">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="room_1_1" class="tab-pane in active">
+                        <div id="room_1_1" class="tab-pane fade">
                             <div class="row no-gutters layout__room">
                                 <div class="col-lg-7">
                                     <div class="layout__room--desc">
@@ -268,7 +286,9 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="d-flex align-items-center layout__room--img">
-                                        <img src="img/layout_1_1.png" alt="" class="w-100">
+                                        <a href="img/layout_1_1.png" class="image-popup-vertical-fit">
+                                            <img src="img/layout_1_1.png" alt="" class="w-100">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -279,13 +299,13 @@
                     <ul class="nav mini-tabs col-lg-6">
 
                         <li>
-                            <a data-toggle="tab" href="#room_1_2">
+                            <a data-toggle="tab" href="#room_1_2" class="active">
                                 <img src="img/layout_1_2.png" alt="" class="w-100">
                                 <h6>46,16 м2</h6>
                             </a>
                         </li>
                         <li>
-                            <a data-toggle="tab" href="#room_1_1" class="active">
+                            <a data-toggle="tab" href="#room_1_1">
                                 <img src="img/layout_1_1.png" alt="" class="w-100">
                                 <h6>57,21 м2</h6>
                             </a>
@@ -334,7 +354,9 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="d-flex align-items-center layout__room--img">
-                                        <img src="img/layout2_1.png" alt="" class="w-100">
+                                        <a href="img/layout2_1.png" class="image-popup-vertical-fit">
+                                            <img src="img/layout2_1.png" alt="" class="w-100">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -379,7 +401,9 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="d-flex align-items-center layout__room--img">
-                                        <img src="img/layout2_2.png" alt="" class="w-100">
+                                        <a href="img/layout2_2.png" class="image-popup-vertical-fit">
+                                            <img src="img/layout2_2.png" alt="" class="w-100">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -443,7 +467,9 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="d-flex align-items-center layout__room--img">
-                                        <img src="img/layout3_2.png" alt="" class="w-100">
+                                        <a href="img/layout3_2.png" class="image-popup-vertical-fit">
+                                            <img src="img/layout3_2.png" alt="" class="w-100">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -488,7 +514,9 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="d-flex align-items-center layout__room--img">
-                                        <img src="img/layout3_1.png" alt="" class="w-100">
+                                        <a href="img/layout3_1.png" class="image-popup-vertical-fit">
+                                            <img src="img/layout3_1.png" alt="" class="w-100">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -499,13 +527,13 @@
                         <li>
                             <a data-toggle="tab" href="#room_3_1" class="active">
                                 <img src="img/layout3_1.png" alt="" class="w-100">
-                                <h6>73,17 м2</h6>
+                                <h6>107,69 м2</h6>
                             </a>
                         </li>
                         <li>
                             <a data-toggle="tab" href="#room_3_2">
                                 <img src="img/layout3_2.png" alt="" class="w-100">
-                                <h6>73,30 м2</h6>
+                                <h6>107,69 м2</h6>
                             </a>
                         </li>
                     </ul>
@@ -534,7 +562,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <img src="img/project.png" alt="" class="w-100">
+                    <a class="popup-youtube" href="http://www.youtube.com/watch?v=436ACnTlixQ">
+                        <img src="img/project.png" alt="" class="w-100">
+                    </a>
                 </div>
                 <div class="col-lg-6 project__block">
                     <h3 class="mb-0">коммерческие помещения</h3>
@@ -592,17 +622,19 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    <div class="callback__teleg d-flex align-items-center justify-content-center">
-                        <img src="img/tele_kanal.png" alt="">
-                        <p>Подпишитесь на телеграм канал!</p>
+                    <div class="callback__teleg">
+                        <a href="https://t.me/alfastroykg" class="d-flex align-items-center justify-content-center" target="_blank">
+                            <img src="img/tele_kanal.png" alt="">
+                            <p>Подпишитесь на телеграм канал!</p>
+                        </a>
                     </div>
                     <div class="callback__form  justify-content-center">
                         <form action="#">
                             <div class="d-flex justify-content-center">
-                                <input type="text" class="callback__form--input" placeholder="Ваше имя">
-                                <input type="text" class="callback__form--input" placeholder="Ваш e-mail">
+                                <input type="text" class="callback__form--input" placeholder="Ваше имя" required>
+                                <input type="text" class="callback__form--input" placeholder="Ваш e-mail" required>
                             </div>
-                            <input class="callback__form--btn" value="Подписаться на обновления">
+                            <input type="submit" class="callback__form--btn" value="Подписаться на обновления">
                         </form>
                     </div>
                 </div>
@@ -629,14 +661,42 @@
                     <p>г. Бишкек, ул. Игембердиева, 1-а, Aurora group</p>
                 </div>
                 <div class="col-lg-4">
-                    <ul class="d-flex justify-content-between">
-                        <li><img src="img/socail_vk.svg" alt=""></li>
-                        <li><img src="img/socail_fb.svg" alt=""></li>
-                        <li><img src="img/socail_insta.svg" alt=""></li>
-                        <li><img src="img/socail_you.svg" alt=""></li>
-                        <li><img src="img/socail_mail.svg" alt=""></li>
-                        <li><img src="img/socail_tele.svg" alt=""></li>
-                        <li><img src="img/socail_ok.svg" alt=""></li>
+                    <ul class="footer__social d-flex justify-content-between">
+                        <li>
+                            <a href="#">
+                                <img src="img/socail_vk.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/alfastroy.kg/">
+                                <img src="img/socail_fb.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/alfastroy.kg/">
+                                <img src="img/socail_insta.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCPFdS1KLcIQOlWfw3WcA-Sg">
+                                <img src="img/socail_you.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/socail_mail.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/socail_tele.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ok.ru/profile/596167364133">
+                                <img src="img/socail_ok.svg" alt="">
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -646,7 +706,7 @@
                 </div>
                 <div class="col-lg-3">
                     <p>Есть жалоба или предложение?</p>
-                    <input type="button" value="Написать нам" class="footer__btn">
+                    <input type="button" value="Написать нам" class="footer__btn b24-web-form-popup-btn-7">
                 </div>
             </div>
         </div>
@@ -657,8 +717,65 @@
 
     <script type="text/javascript " src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js "></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/custom.js"></script>
+    <!-- WhatsHelp.io widget -->
+    <script type="text/javascript">
+        (function() {
+            var options = {
+                whatsapp: "+996 222 444 444", // WhatsApp number
+                button_color: "#129BF4", // Color of button
+                position: "left", // Position may be 'right' or 'left'
+                order: "whatsapp,telegram", // Order of buttons
+            };
+            var proto = document.location.protocol,
+                host = "whatshelp.io",
+                url = proto + "//static." + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function() {
+                WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- /WhatsHelp.io widget -->
+    <script>
+        (function(w, d, u) {
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn-ru.bitrix24.ru/b14285266/crm/site_button/loader_1_f226v8.js');
+    </script>
+    <script id="bx24_form_button" data-skip-moving="true">
+        (function(w, d, u, b) {
+            w['Bitrix24FormObject'] = b;
+            w[b] = w[b] || function() {
+                arguments[0].ref = u;
+                (w[b].forms = w[b].forms || []).push(arguments[0])
+            };
+            if (w[b]['forms']) return;
+            var s = d.createElement('script');
+            s.async = 1;
+            s.src = u + '?' + (1 * new Date());
+            var h = d.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://sk-alfa.bitrix24.ru/bitrix/js/crm/form_loader.js', 'b24form');
+
+        b24form({
+            "id": "7",
+            "lang": "ru",
+            "sec": "1onkk3",
+            "type": "button",
+            "click": ""
+        });
+    </script>
 
 </body>
 
