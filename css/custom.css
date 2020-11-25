@@ -62,6 +62,10 @@ a:hover {
     bottom: 15px;
 }
 
+div#html5-watermark {
+    display: none!important;
+}
+
 
 /* ALL */
 
@@ -115,13 +119,13 @@ header img {
 }
 
 .header__time {
-    margin: 0 20px 0 45px;
+    margin: 0 25px 0 20px;
     display: flex;
     align-items: center;
 }
 
 .header__time--hour {
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 15px;
     text-align: center;
 }
@@ -146,7 +150,7 @@ header img {
 .header__language {
     margin-left: 23px;
     border: 0.5px solid #4F4C4C;
-    padding: 2px 10px;
+    padding: 6px 10px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -192,7 +196,11 @@ header img {
 /* slide */
 
 .slider {
-    padding-top: 100px;
+    padding-top: 120px;
+    padding-bottom: 45px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
 }
 
 .slider__quote h6 {
@@ -200,6 +208,7 @@ header img {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 300;
+    color: white;
 }
 
 .slider__quote h6::after {
@@ -207,14 +216,15 @@ header img {
     display: block;
     width: 60px;
     height: 5px;
-    background-color: #103550;
+    background-color: #dde4e9;
     margin-top: 10px;
 }
 
 .slide__title {
     margin-top: 45px;
-    background-color: #DDE4E9;
+    background-color: #dde4e9b5;
     padding: 20px 25px;
+    color: white;
 }
 
 .slide__title h1 {
@@ -239,16 +249,21 @@ header img {
     font-weight: 300;
     font-size: 15px;
     line-height: 19px;
-    color: #4D4747;
+    color: white;
 }
 
 .slide__button {
     margin-top: 55px;
 }
 
+.slide__button img {
+    padding: 0 10px;
+}
+
 .slide__button--signup {
     position: relative;
-    padding: 35px;
+    padding: 35px 35px 35px 0;
+    color: white;
 }
 
 .slide__button--signup::before {
@@ -268,8 +283,8 @@ header img {
     display: block;
     width: 255px;
     height: 5px;
-    background-color: #103550;
-    margin-top: 10px;
+    background-color: #dde4e9;
+    margin-top: 30px;
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
@@ -310,11 +325,17 @@ a.slide__button--signup:hover::after {
 }
 
 .slide__button a {
+    display: flex;
     font-weight: 300;
     font-size: 14px;
     line-height: 21px;
-    color: #000000;
+    color: white;
     text-transform: uppercase;
+}
+
+.slide__button img {
+    filter: invert(1);
+    -webkit-filter: invert(1);
 }
 
 .slide__button--download {
@@ -345,7 +366,7 @@ a.slide__button--signup:hover::after {
 
 .ban__sl .slick-prev,
 .ban__sl .slick-next {
-    top: 21%;
+    top: 50%;
 }
 
 .ban__sl .slick-next:before {
@@ -370,11 +391,11 @@ a.slide__button--signup:hover::after {
 }
 
 .ban__sl .slick-prev {
-    left: -85px;
+    left: 10px;
 }
 
 .ban__sl .slick-next {
-    left: 0;
+    right: 50px;
 }
 
 .maphilighted {
@@ -461,7 +482,8 @@ a.slide__button--signup:hover::after {
 
 .tabs__content--number {
     font-size: 70px;
-    margin-right: 40px;
+    width: 50%;
+    text-align: center;
     line-height: 60px;
     font-weight: 500;
 }
@@ -733,7 +755,7 @@ img.mfp-img {
     -o-transition: .2s;
 }
 
-.project img:hover {
+.project__block--you img:hover {
     filter: brightness(0.5);
     -webkit-filter: brightness(0.5);
     transition: .2s;
@@ -741,6 +763,28 @@ img.mfp-img {
     -moz-transition: .2s;
     -ms-transition: .2s;
     -o-transition: .2s;
+}
+
+.project__block--img:after {
+    content: '';
+    position: absolute;
+    background: #00000073;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    top: -600px;
+    opacity: 0;
+    height: 100%;
+}
+
+.project__block--img:hover:after {
+    opacity: 1;
+    top: 0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }
 
 .project__block {
@@ -760,6 +804,7 @@ img.mfp-img {
 
 .project__block--img {
     position: relative;
+    overflow: hidden;
 }
 
 .project__block--sale {
@@ -788,7 +833,8 @@ img.mfp-img {
     margin-top: 71px;
 }
 
-.build__block--filter a {
+.build select {
+    width: 100%;
     display: block;
     background: #FFFFFF;
     border: 0.5px solid #C2B7B7;
@@ -796,7 +842,7 @@ img.mfp-img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: #000000;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px;
     margin-bottom: 30px;
 }
 

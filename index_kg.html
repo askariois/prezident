@@ -49,9 +49,11 @@
 
                         <!-- <a href="#" data-toggle="modal" data-target="#exampleModalCenter"> Заказать звонок</a> -->
                     </div>
-                    <a href="#" onclick="document.location='index.html'" class="header__language">
-                        RU
-                    </a>
+                    <select class="header__language" onchange="if (this.value) window.location.href = this.value">
+                        <option value="index_kg.html">КГ</option>
+                        <option value="index.html">РУ</option>
+                    
+                      </select>
                 </div>
             </div>
         </div>
@@ -81,41 +83,60 @@
         </div>
     </div>
     <!-- slider -->
-    <section class="slider">
+    <div class="ban__sl">
+        <div>
+            <section class="slider" style="background-image: url('../img/cover_bg.png');">
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class=" slider__quote">
+                                <h6>Ар бир чарчы метрге жакшы маанай менен</h6>
+                            </div>
+                            <div class="slide__title">
+                                <h1 class="slide__title--bold">Клубный дом </h1>
+                                <h1 class="slide__title--regular"> President Palace</h1>
+                            </div>
+                            <div class="slide__desc">
+                                <p> Ар бир квадрат метрде жакшы маанай President Palace – бул сиз үчүн коопсуз жана жайлуу жай.Smart – өзүбүздүн шаар үчүн.
+                                </p>
+                            </div>
+                            <div class="slide__button d-flex justify-content-between align-items-center">
+                                <a href="#" class="slide__button--signup b24-web-form-popup-btn-15">Записаться <img src="img/sign_icon.svg" alt=""></a>
+                                <a href="img/work_albom.pdf" class="slide__button--download" target="_blank"><img src="img/download_icon.svg" alt=""> скачать рабочий альбом </a>
+                            </div>
+                        </div>
 
-        <div class="row no-gutters">
-            <div class="col-lg-6">
-                <div class=" slider__quote">
-                    <h6>Ар бир чарчы метрге жакшы маанай менен</h6>
-
-
-                </div>
-                <div class="slide__title">
-                    <h1 class="slide__title--bold">Клубный дом </h1>
-                    <h1 class="slide__title--regular"> President Palace</h1>
-                </div>
-                <div class="slide__desc">
-                    <p> Ар бир квадрат метрде жакшы маанай President Palace – бул сиз үчүн коопсуз жана жайлуу жай.Smart – өзүбүздүн шаар үчүн.
-                    </p>
-                </div>
-                <div class="slide__button d-flex justify-content-between align-items-center">
-                    <a href="#" class="slide__button--signup b24-web-form-popup-btn-15">Записаться <img src="img/sign_icon.svg" alt=""></a>
-                    <a href="img/work_albom.pdf" class="slide__button--download" target="_blank"><img src="img/download_icon.svg" alt=""> скачать рабочий альбом </a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="ban__sl">
-                    <div>
-                        <img src="img/slider_bg.png " alt=" " class="w-100 ">
-                    </div>
-                    <div>
-                        <img src="img/slider_bg.png " alt=" " class="w-100 ">
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
+        <div>
+            <section class="slider" style="background-image: url('../img/cover_bg_2.png');">
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class=" slider__quote">
+                                <h6>Ар бир чарчы метрге жакшы маанай менен</h6>
+                            </div>
+                            <div class="slide__title">
+                                <h1 class="slide__title--bold">Клубный дом </h1>
+                                <h1 class="slide__title--regular"> President Palace</h1>
+                            </div>
+                            <div class="slide__desc">
+                                <p> Ар бир квадрат метрде жакшы маанай President Palace – бул сиз үчүн коопсуз жана жайлуу жай.Smart – өзүбүздүн шаар үчүн.
+                                </p>
+                            </div>
+                            <div class="slide__button d-flex justify-content-between align-items-center">
+                                <a href="#" class="slide__button--signup b24-web-form-popup-btn-15">Записаться <img src="img/sign_icon.svg" alt=""></a>
+                                <a href="img/work_albom.pdf" class="slide__button--download" target="_blank"><img src="img/download_icon.svg" alt=""> скачать рабочий альбом </a>
+                            </div>
+                        </div>
 
-    </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 
     <!-- slider -->
 
@@ -153,12 +174,12 @@
                                 <div class="tabs__content--number">14</div>
                                 <p class="mb-0">кабат кереметтүү көрүнүшү менен </p>
                             </div>
-                            <!-- <div class="d-flex align-items-end tabs__content--quantity justify-content-between">
+                            <div class="d-flex align-items-end tabs__content--quantity justify-content-between">
                                 <div class="tabs__content--number">2</div>
-                                <p class="mb-0 mr-2">этажа бизнес-пространства</p>
-                            </div> -->
+                                <p class="mb-0 mr-2">кабат бизнес- мейкиндик</p>
+                            </div>
                             <div class="tabs__content--btn">
-                                <a href="#about" class="b24-web-form-popup-btn-15">Купить квартиру</a>
+                                <a href="#callback">Купить квартиру</a>
                             </div>
                         </div>
                     </div>
@@ -216,6 +237,11 @@
                         <img src="img/gal3.png" alt="3">
                     </a>
                 </div>
+                <div class="gallery__block">
+                    <a href="img/gal4.png" class="popup-link popup">
+                        <img src="img/gal4.png" alt="3">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -237,6 +263,9 @@
                 </li>
                 <li class="tabs-nav__item">
                     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#room3" role="tab" aria-controls="pills-contact" aria-selected="false">3-комнатные</a>
+                </li>
+                <li class="tabs-nav__item">
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#room5" role="tab" aria-controls="pills-contact" aria-selected="false">5-комнатные</a>
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
@@ -562,6 +591,119 @@
                         </li>
                     </ul>
                 </div>
+                <div class="tab-pane fade layout__room--flat" id="room5" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="tab-content">
+                        <div id="room_3_1" class="tab-pane in active">
+                            <div class="row no-gutters layout__room">
+                                <div class="col-lg-6">
+                                    <div class="layout__room--desc">
+                                        Общая площадь 5-комнатной квартиры
+                                        <div class="layout__room--number">
+                                            204,57 м2
+                                        </div>
+                                        <ul class="layout__room--square d-flex justify-content-between">
+                                            <li>
+                                                <p>Хол</p> <span> 10,16 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Кухня</p> <span> 15,61 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Балкон</p> <span> 5,60 м2</span> </li>
+                                            <li>
+                                                <p>Гостиная</p> <span> 20,65 м2</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="layout__room--square d-flex justify-content-between">
+                                            <li>
+                                                <p>Спальня</p> <span>15,87 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Ванная</p> <span>4,15 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Санузел</p> <span>2,20 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Лоджия</p> <span>4,58 м2</span>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center layout__room--img">
+                                        <a href="img/layout5_1.png" class="image-popup-vertical-fit">
+                                            <img src="img/layout5_1.png" alt="" class="w-100">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="room_3_2" class="tab-pane fade">
+                            <div class="row no-gutters layout__room">
+                                <div class="col-lg-6">
+                                    <div class="layout__room--desc">
+                                        Общая площадь 5-комнатной квартиры
+                                        <div class="layout__room--number">
+                                            204,57 м2
+                                        </div>
+                                        <ul class="layout__room--square d-flex justify-content-between">
+                                            <li>
+                                                <p>Хол</p> <span> 10,16 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Кухня</p> <span> 15,61 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Балкон</p> <span> 5,60 м2</span> </li>
+                                            <li>
+                                                <p>Гостиная</p> <span> 20,65 м2</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="layout__room--square d-flex justify-content-between">
+                                            <li>
+                                                <p>Спальня</p> <span>15,87 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Ванная</p> <span>4,15 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Санузел</p> <span>2,20 м2</span>
+                                            </li>
+                                            <li>
+                                                <p>Лоджия</p> <span>4,58 м2</span>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center layout__room--img">
+                                        <a href="img/layout5_2.png" class="image-popup-vertical-fit">
+                                            <img src="img/layout5_2.png" alt="" class="w-100">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="nav mini-tabs col-lg-6">
+                        <li>
+                            <a data-toggle="tab" href="#room_3_1" class="active">
+                                <img src="img/layout3_1.png" alt="" class="w-100">
+                                <h6>204,57 м2</h6>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#room_3_2">
+                                <img src="img/layout3_2.png" alt="" class="w-100">
+                                <h6>204,57 м2</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
     </section>
     <!-- layout -->
@@ -585,84 +727,68 @@
 
         <!--Корпуса -->
         <article id="plan-main" class="plan"><img src="img/plan/plan_main.png" id="plan-main" alt="" usemap="#plan_map" /><map name="plan_map">
-        <area shape="poly" id="3_11float" data-title="3 этаж" data-plan="" coords="503, 676, 504, 634, 710, 615, 878, 655, 877, 687, 710, 660"/>
-        <area shape="poly" id="3_11float" data-title="4 этаж" data-plan="" coords="504, 633, 504, 594, 709, 570, 879, 622, 877, 653, 710, 614"/>
-        <area shape="poly" id="3_11float" data-title="5 этаж" data-plan="" coords="504, 592, 503, 554, 712, 526, 878, 586, 878, 622, 709, 569"/>
-        <area shape="poly" id="3_11float" data-title="6 этаж" data-plan="" coords="505, 553, 504, 513, 710, 479, 878, 552, 877, 585, 710, 525"/>
-        <area shape="poly" id="3_11float" data-title="7 этаж" data-plan="" coords="504, 512, 503, 467, 709, 433, 879, 519, 878, 551, 709, 478"/>
-        <area shape="poly" id="3_11float" data-title="8 этаж" data-plan="" coords="502, 467, 502, 424, 709, 385, 881, 486, 879, 519, 708, 431"/>   
-        <area shape="poly" id="3_11float" data-title="9 этаж" data-plan="" coords="501, 423, 502, 384, 710, 336, 884, 456, 882, 485, 709, 384"/>   
-        <area shape="poly" id="3_11float" data-title="10 этаж" data-plan="" coords="502, 380, 503, 350, 709, 291, 882, 424, 885, 453, 710, 335"/>   
-        <area shape="poly" id="3_11float" data-title="11 этаж" data-plan="" coords="502, 350, 504, 309, 610, 263, 629, 271, 706, 235, 885, 394, 884, 422, 710, 290"/>   
-        <area shape="poly" id="12_13float" data-title="12 этаж" data-plan="" coords="505, 307, 506, 272, 605, 225, 629, 234, 698, 190, 880, 356, 880, 386, 708, 236, 630, 271, 609, 261"/>  
-        <area shape="poly" id="12_13float" data-title="13 этаж" data-plan="" coords="504, 271, 509, 227, 608, 182, 632, 188, 703, 150, 882, 321, 880, 354, 699, 190, 630, 235, 603, 226"/>  
-        <area shape="poly" id="14float" data-title="14 этаж" data-plan="" coords="508, 226, 509, 187, 605, 135, 630, 144, 702, 101, 880, 289, 880, 320, 702, 151, 633, 187, 608, 182"/>  
-        <area shape="poly" id="15float" data-title="15 этаж" data-plan="" coords="507, 185, 505, 166, 545, 135, 545, 103, 610, 57, 628, 69, 711, 11, 794, 125, 792, 153, 814, 180, 830, 173, 882, 241, 880, 286, 700, 101, 629, 144, 604, 133"/>  
+        <area shape="poly" id="3_11float" data-title="3 этаж" data-plan="#plan-3" coords="503, 676, 504, 634, 710, 615, 878, 655, 877, 687, 710, 660"/>
+        <area shape="poly" id="3_11float" data-title="4 этаж" data-plan="#plan-3" coords="504, 633, 504, 594, 709, 570, 879, 622, 877, 653, 710, 614"/>
+        <area shape="poly" id="3_11float" data-title="5 этаж" data-plan="#plan-3" coords="504, 592, 503, 554, 712, 526, 878, 586, 878, 622, 709, 569"/>
+        <area shape="poly" id="3_11float" data-title="6 этаж" data-plan="#plan-3" coords="505, 553, 504, 513, 710, 479, 878, 552, 877, 585, 710, 525"/>
+        <area shape="poly" id="3_11float" data-title="7 этаж" data-plan="#plan-3" coords="504, 512, 503, 467, 709, 433, 879, 519, 878, 551, 709, 478"/>
+        <area shape="poly" id="3_11float" data-title="8 этаж" data-plan="#plan-3" coords="502, 467, 502, 424, 709, 385, 881, 486, 879, 519, 708, 431"/>   
+        <area shape="poly" id="3_11float" data-title="9 этаж" data-plan="#plan-3" coords="501, 423, 502, 384, 710, 336, 884, 456, 882, 485, 709, 384"/>   
+        <area shape="poly" id="3_11float" data-title="10 этаж" data-plan="#plan-3" coords="502, 380, 503, 350, 709, 291, 882, 424, 885, 453, 710, 335"/>   
+        <area shape="poly" id="3_11float" data-title="11 этаж" data-plan="#plan-3" coords="502, 350, 504, 309, 610, 263, 629, 271, 706, 235, 885, 394, 884, 422, 710, 290"/>   
+        <area shape="poly" id="12_13float" data-title="12 этаж" data-plan="#plan-12" coords="505, 307, 506, 272, 605, 225, 629, 234, 698, 190, 880, 356, 880, 386, 708, 236, 630, 271, 609, 261"/>  
+        <area shape="poly" id="12_13float" data-title="13 этаж" data-plan="#plan-12" coords="504, 271, 509, 227, 608, 182, 632, 188, 703, 150, 882, 321, 880, 354, 699, 190, 630, 235, 603, 226"/>  
+        <area shape="poly" id="14float" data-title="14 этаж" data-plan="#plan-14" coords="508, 226, 509, 187, 605, 135, 630, 144, 702, 101, 880, 289, 880, 320, 702, 151, 633, 187, 608, 182"/>  
+        <area shape="poly" id="15float" data-title="15 этаж" data-plan="#plan-14" coords="507, 185, 505, 166, 545, 135, 545, 103, 610, 57, 628, 69, 711, 11, 794, 125, 792, 153, 814, 180, 830, 173, 882, 241, 880, 286, 700, 101, 629, 144, 604, 133"/>  
     </map>
 
         </article>
 
-
-
-
         <!--3-11 этаж -->
-
-
         <article id="plan-3" style="display: none;" data-back="#plan-main" class="plan ">
             <img src="img/plan/blog_1/stage_1.jpg" id="plan-image-d21" alt="" usemap="#plan_map-d21" />
-            <map name="plan_map-d21">
-       <area shape="poly" data-title="1-ком.кв(54,84м2 улучшенная планировка)" href="img/plan/blog_1/apartments/54,84.jpg" coords="723, 405, 722, 361, 797, 360, 800, 331, 963, 336, 966, 90, 446, 88, 447, 148, 446, 408" class="cplan html5lightbox"/>
-        <area shape="poly" data-title="1-ком.кв(41,92м2)" href="img/plan/blog_1/apartments/41,92.jpg" coords="1122, 87, 1472, 88, 1472, 151, 1478, 153, 1475, 414, 1199, 409, 1200, 363, 1124, 364" class="cplan html5lightbox"/>
-        <area shape="poly" data-title="1-ком.кв(43,64м2)" href="img/plan/blog_1/apartments/43,64.jpg" coords="446, 406, 447, 663, 452, 666, 452, 735, 792, 735, 794, 406" class="cplan html5lightbox"/>
-        <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_1/apartments/44,02.jpg" coords="794, 405, 1133, 408, 1131, 736, 792, 736" class="cplan html5lightbox"/>
-        <area shape="poly" data-title="1-ком.кв(43,64м2)" href="img/plan/blog_1/apartments/43,64.jpg" coords="1133, 409, 1476, 411, 1473, 736, 1133, 736" class="cplan html5lightbox"/>
+            <map name="plan_map-d21" class="popup-layout">
+       <area shape="poly" data-title="1-ком.кв(57,21м2)" href="img/plan/blog_1/apartments/57,21.png" coords="1051, 411, 855, 412, 857, 691, 1048, 692" class="cplan html5lightbox"/>
+        <area shape="poly" data-title="3-ком.кв<br/>(107,69м2)" href="img/plan/blog_1/apartments/107,69.png" coords="1052, 412, 1052, 735, 1364, 736, 1365, 520, 1411, 518, 1412, 413" class="cplan html5lightbox"/>
+        <area shape="poly" data-title="2-ком.кв(73,30м2)" href="img/plan/blog_1/apartments/73,30.png" coords="1145, 97, 1148, 414, 1412, 414, 1411, 312, 1360, 313, 1362, 95" class="cplan html5lightbox"/>
+        <area shape="poly" data-title="1-ком.кв(46,16м2)" href="img/plan/blog_1/apartments/46,16.png" coords="754, 95, 955, 95, 957, 329, 755, 327" class="cplan html5lightbox"/>
+        <area shape="poly" data-title="2-ком.кв(73,17м2)" href="img/plan/blog_1/apartments/73,17.png" coords="758, 410, 754, 96, 541, 97, 541, 312, 490, 313, 489, 415" class="cplan html5lightbox"/>
+        <area shape="poly" data-title="3-ком.кв<br/>(107,69м2)" href="img/plan/blog_1/apartments/107,69.png" coords="856, 735, 856, 413, 490, 416, 491, 520, 542, 520, 542, 738" class="cplan html5lightbox"/>
         </map>
         </article>
         <!--3-11 этаж -->
 
         <!--12-13 этаж-->
-
-
         <article id="plan-12" style="display: none;" data-back="#plan-main" class="plan">
-            <img src="img/plan/blog_1/stage_2.jpg" id="plan-image-12" alt="" usemap="#plan_map-12n" />
+            <img src="img/plan/blog_2/stage_1.jpg" id="plan-image-12" alt="" usemap="#plan_map-12n" />
             <map name="plan_map-12n">
-                   <area shape="poly" data-title="1-ком.кв(54,84м2 улучшенная планировка)" href="img/plan/blog_1/apartments/54,84.jpg" coords="723, 405, 722, 361, 797, 360, 800, 331, 963, 336, 966, 90, 446, 88, 447, 148, 446, 408" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(41,92м2)" href="img/plan/blog_1/apartments/41,92.jpg" coords="1122, 87, 1472, 88, 1472, 151, 1478, 153, 1475, 414, 1199, 409, 1200, 363, 1124, 364" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(43,64м2)" href="img/plan/blog_1/apartments/43,64.jpg" coords="446, 406, 447, 663, 452, 666, 452, 735, 792, 735, 794, 406" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_1/apartments/44,02.jpg" coords="794, 405, 1133, 408, 1131, 736, 792, 736" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(43,64м2)" href="img/plan/blog_1/apartments/43,64.jpg" coords="1133, 409, 1476, 411, 1473, 736, 1133, 736" class="cplan html5lightbox"/>
+                <map name="plan_map-d21" class="popup-layout">
+                    <area shape="poly" data-title="1-ком.кв(57,21м2)" href="img/plan/blog_2/apartments/57,21.png" coords="1051, 411, 855, 412, 857, 691, 1048, 692" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="3-ком.кв<br/>(102,88м2)" href="img/plan/blog_2/apartments/102,88.png" coords="1052, 412, 1052, 735, 1364, 736, 1365, 520, 1411, 518, 1412, 413" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="2-ком.кв(70,39м2)" href="img/plan/blog_2/apartments/70,39.png" coords="1145, 97, 1148, 414, 1412, 414, 1411, 312, 1360, 313, 1362, 95" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="1-ком.кв(46,16м2)" href="img/plan/blog_2/apartments/46,16.png" coords="754, 95, 955, 95, 957, 329, 755, 327" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="2-ком.кв(71,39м2)" href="img/plan/blog_2/apartments/71,39.png" coords="758, 410, 754, 96, 541, 97, 541, 312, 490, 313, 489, 415" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="3-ком.кв<br/>(104,94м2)" href="img/plan/blog_2/apartments/104,94.png" coords="856, 735, 856, 413, 490, 416, 491, 520, 542, 520, 542, 738" class="cplan html5lightbox"/>
                     </map>
         </article>
         <!--12-13 этаж-->
 
 
-        <!--14 этаж-->
-
-
-        <article id="plan-14" style="display: none;" data-back="#plan-5" class="plan">
-            <img src="img/plan/blog_2/stage_2.jpg" id="plan-image-8" alt="" usemap="#plan_map-52" />
+        <!--14-15 этаж-->
+        <article id="plan-14" style="display: none;" data-back="#plan-main" class="plan">
+            <img src="img/plan/blog_3/stage_1.jpg" id="plan-image-8" alt="" usemap="#plan_map-52" />
             <map name="plan_map-52">
-                    <area shape="poly" data-title="3-ком.кв(80,53м2 улучшенная планировка)" href="img/plan/blog_2/apartments/80,53.jpg" coords="3, 541, 4, 238, 251, 239, 248, 355, 204, 355, 203, 391, 88, 393, 88, 542" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="88, 541, 248, 540, 246, 388, 88, 391" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="245, 387, 406, 389, 403, 540, 245, 542" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="2-ком.кв(66,00м2)" href="img/plan/blog_2/apartments/66,00.jpg" coords="325, 387, 324, 237, 485, 240, 481, 540, 403, 539, 404, 388" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="3-ком.кв(81,29м2 улучшенная планировка)" href="img/plan/blog_2/apartments/81,29.jpg" coords="480, 540, 485, 239, 725, 240, 722, 352, 679, 351, 678, 390, 561, 391, 562, 542" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="563, 540, 722, 542, 722, 389, 560, 390" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="724, 541, 881, 540, 881, 540, 881, 540, 880, 391, 879, 390, 722, 390" class="cplan html5lightbox"/>
-                      <area shape="poly" data-title="2-ком.кв(65,27м2)" href="img/plan/blog_2/apartments/65,27.jpg" coords="800, 391, 799, 238, 965, 239, 961, 541, 880, 541, 880, 387" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="3-ком.кв(80,53м2 улучшенная планировка)" href="img/plan/blog_2/apartments/80,53.jpg" coords="965, 239, 961, 540, 1044, 541, 1044, 391, 1158, 391, 1158, 352, 1203, 353, 1204, 239" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="1044, 541, 1204, 542, 1203, 390, 1044, 391" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="1210, 540, 1362, 541, 1362, 389, 1203, 389, 1202, 540" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="2-ком.кв(66,00м2)" href="img/plan/blog_2/apartments/66,00.jpg" coords="1439, 540, 1440, 238, 1279, 239, 1280, 389, 1361, 389, 1360, 540" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="3-ком.кв(81,29м2 улучшенная планировка)" href="img/plan/blog_2/apartments/81,29.jpg" coords="1439, 541, 1519, 540, 1518, 391, 1635, 391, 1636, 355, 1676, 353, 1679, 237, 1440, 237" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="1677, 540, 1676, 390, 1519, 391, 1519, 542" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="1677, 539, 1835, 541, 1836, 390, 1675, 390" class="cplan html5lightbox"/>
-                    <area shape="poly" data-title="2-ком.кв(65,27м2)" href="img/plan/blog_2/apartments/65,27.jpg" coords="1835, 540, 1916, 541, 1917, 237, 1752, 239, 1754, 390, 1837, 391" class="cplan html5lightbox"/>
-            
-            
-                            </map>
+                <map name="plan_map-d21" class="popup-layout">
+                    <area shape="poly" data-title="1-ком.кв<br/>(104,72м2)" href="img/plan/blog_3/apartments/104,72.png" coords="1051, 411, 855, 412, 857, 691, 1048, 692" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="5-ком.кв<br/>(204,57м2)" href="img/plan/blog_3/apartments/204,57.png" coords="1052, 412, 1052, 735, 1364, 736, 1365, 520, 1411, 518, 1412, 413" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="3-ком.кв<br/>(137,91м2)" href="img/plan/blog_3/apartments/137,91.png" coords="1145, 97, 1148, 414, 1412, 414, 1411, 312, 1360, 313, 1362, 95" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="2-ком.кв<br/>(121,90м2)" href="img/plan/blog_3/apartments/121,90.png" coords="754, 95, 955, 95, 957, 329, 755, 327" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="3-ком.кв<br/>(137,91м2)" href="img/plan/blog_3/apartments/137,91.png" coords="758, 410, 754, 96, 541, 97, 541, 312, 490, 313, 489, 415" class="cplan html5lightbox"/>
+                     <area shape="poly" data-title="5-ком.кв<br/>(204,57м2)" href="img/plan/blog_3/apartments/204,57.png" coords="856, 735, 856, 413, 490, 416, 491, 520, 542, 520, 542, 738" class="cplan html5lightbox"/>
+                    </map>
+            </map>
         </article>
-        <!--14 этаж-->
+        <!--14-15 этаж-->
 
     </section>
     <!-- visual -->
@@ -712,21 +838,31 @@
                 ход строительства
             </div>
             <div class="row build__block">
-                <div class="col-lg-6">
-                    <div class="build__block--img">
-                        <img src="img/hod_stroy.png" alt="" class="w-100">
-                        <div class="build__block--date">
-                            Сентябрь, 2020
+                <div class="col-lg-9">
+
+                    <div id="red" class="colors">
+                        <div class="build__block--img">
+                            <img src="img/hod_stroy.png" alt="" class="w-100">
+                            <div class="build__block--date">
+                                Сентябрь, 2020
+                            </div>
+                        </div>
+                    </div>
+                    <div id="yellow" class="colors" style="display:none">
+                        <div class="build__block--img">
+                            <img src="img/hod_stroy_2.png" alt="" class="w-100">
+                            <div class="build__block--date">
+                                Октябрь, 2020
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="build__block--img">
-                        <img src="img/hod_stroy_2.png" alt="" class="w-100">
-                        <div class="build__block--date">
-                            Октябрь, 2020
-                        </div>
-                    </div>
+                <div class="col-lg-3">
+                    <Select id="colorselector">
+                        <option value="red">Сентябрь</option>
+                        <option value="yellow">Октябрь</option>
+                     </Select>
+
                 </div>
             </div>
         </div>
@@ -735,7 +871,7 @@
     <!-- build -->
 
     <!-- callback -->
-    <section class="callback">
+    <section class="callback" id="callback">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">

@@ -46,46 +46,27 @@ $('.ban__sl').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true
+    arrows: true,
+    responsive: [{
+        breakpoint: 576,
+        settings: {
+            arrows: false
+        }
+    }]
 });
 // Slick slider
 
 
-$(document).ready(function() {
-    $('.popup-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-        }
-    });
-    $('.image-popup-vertical-fit').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        mainClass: 'mfp-img-mobile',
-        image: {
-            verticalFit: true
-        }
-
-    });
-    $('.popup-youtube').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-
-        fixedContentPos: false
+$(function() {
+    $('#colorselector').change(function() {
+        $('.colors').hide();
+        $('#' + $(this).val()).show();
     });
 });
 
 
 $(function() {
-    $('.header a[href^="#"]').on('click', function(event) {
+    $('.header a[href^="#"] , .tabs__content--btn a').on('click', function(event) {
         // отменяем стандартное действие
         event.preventDefault();
 
