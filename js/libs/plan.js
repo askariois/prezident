@@ -38,7 +38,7 @@ $(document).ready(function() {
         $('.plan img').maphilight({
             fill: true,
             // alwaysOn: true,
-            fillColor: '131e70',
+            fillColor: '000000',
             fillOpacity: 0.7,
             stroke: false
         });

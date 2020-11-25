@@ -44,7 +44,8 @@ ul {
 .visaul,
 .project,
 .build,
-.callback {
+.callback,
+.installment {
     margin-top: 100px;
 }
 
@@ -115,11 +116,18 @@ header img {
 
 .header__time {
     margin: 0 20px 0 45px;
+    display: flex;
+    align-items: center;
 }
 
 .header__time--hour {
     font-size: 12px;
-    margin-left: 20px;
+    margin-left: 15px;
+    text-align: center;
+}
+
+.header__time--hour span {
+    font-size: 10px;
 }
 
 .header__callback a {
