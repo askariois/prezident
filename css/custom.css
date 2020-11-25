@@ -275,7 +275,7 @@ a.slide__button--download:hover img {
 }
 
 a.slide__button--signup:hover::after {
-    width: 150px;
+    width: 495px;
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
@@ -311,6 +311,67 @@ a.slide__button--signup:hover::after {
 
 .slide__button--download {
     margin-right: 30px;
+}
+
+.ban__sl .slick-prev:before {
+    content: '';
+    background-image: url('../img/prev_white.svg');
+    background-size: 50%;
+    display: block;
+    position: relative;
+    margin-left: 45px;
+    padding: 6px 10px;
+    background-color: #393538;
+    opacity: 1;
+}
+
+.ban__sl .slick-prev:hover:before {
+    background-image: url('../img/prev.svg');
+    background-color: rgba(196, 196, 196, 0.7);
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.ban__sl .slick-prev,
+.ban__sl .slick-next {
+    top: 21%;
+}
+
+.ban__sl .slick-next:before {
+    content: '';
+    background-image: url('../img/next.svg');
+    background-size: 50%;
+    display: block;
+    position: relative;
+    padding: 6px 10px;
+    background-color: rgba(196, 196, 196, 0.7);
+    opacity: 1;
+}
+
+.ban__sl .slick-next:hover:before {
+    background-image: url('../img/next_white.svg');
+    background-color: #393538;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.ban__sl .slick-prev {
+    left: -85px;
+}
+
+.ban__sl .slick-next {
+    left: 0;
+}
+
+.maphilighted {
+    width: 100%!important;
+    background-repeat: no-repeat;
 }
 
 
@@ -562,8 +623,12 @@ a.slide__button--signup:hover::after {
 }
 
 .layout__room--square {
-    margin-right: 130px;
+    margin-right: 80px;
     margin-top: 30px;
+}
+
+img.mfp-img {
+    background-color: #fff;
 }
 
 .layout__room--square p {
@@ -787,6 +852,16 @@ a.slide__button--signup:hover::after {
 
 .callback__teleg a:hover p {
     font-weight: 500;
+}
+
+.modal-body .callback__form--input {
+    margin: 10px 10px 24px 10px;
+    padding: 17px 32px;
+    width: 100%;
+    border: 0;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 

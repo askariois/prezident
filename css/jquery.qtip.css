@@ -1,0 +1,230 @@
+/*
+ * qTip2 - Pretty powerful tooltips - v3.0.3
+ * http://qtip2.com
+ *
+ * Copyright (c) 2016 
+ * Released under the MIT licenses
+ * http://jquery.org/license
+ *
+ * Date: Wed May 11 2016 06:50 EDT-0400
+ * Plugins: None
+ * Styles: core
+ */
+
+.plan-block img {
+    width: 100%;
+}
+
+.back-bt {
+    display: none;
+}
+
+.qtip {
+    position: absolute;
+    left: -28000px;
+    top: -28000px;
+    display: none;
+    max-width: 280px;
+    min-width: 50px;
+    font-size: 10.5px;
+    line-height: 12px;
+    direction: ltr;
+    box-shadow: none;
+    padding: 0;
+}
+
+.qtip-content {
+    position: relative;
+    padding: 5px 9px;
+    overflow: hidden;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.qtip-titlebar {
+    position: relative;
+    padding: 5px 35px 5px 10px;
+    overflow: hidden;
+    border-width: 0 0 1px;
+    font-weight: bold;
+}
+
+.qtip-titlebar+.qtip-content {
+    border-top-width: 0 !important;
+}
+
+
+/* Default close button class */
+
+.qtip-close {
+    position: absolute;
+    right: -9px;
+    top: -9px;
+    z-index: 11;
+    /* Overlap .qtip-tip */
+    cursor: pointer;
+    outline: medium none;
+    border: 1px solid transparent;
+}
+
+.qtip-titlebar .qtip-close {
+    right: 4px;
+    top: 50%;
+    margin-top: -9px;
+}
+
+* html .qtip-titlebar .qtip-close {
+    top: 16px;
+}
+
+
+/* IE fix */
+
+.qtip-titlebar .ui-icon,
+.qtip-icon .ui-icon {
+    display: block;
+    text-indent: -1000em;
+    direction: ltr;
+}
+
+.qtip-icon,
+.qtip-icon .ui-icon {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.qtip-icon .ui-icon {
+    width: 18px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-indent: 0;
+    font: normal bold 10px/13px Tahoma, sans-serif;
+    color: inherit;
+    background: transparent none no-repeat -100em -100em;
+}
+
+
+/* Applied to 'focused' tooltips e.g. most recently displayed/interacted with */
+
+.qtip-focus {}
+
+
+/* Applied on hover of tooltips i.e. added/removed on mouseenter/mouseleave respectively */
+
+.qtip-hover {}
+
+
+/* Default tooltip style */
+
+.qtip-default {
+    border: 1px solid #F1D031;
+    background-color: #FFFFA3;
+    color: #555;
+}
+
+.qtip-default .qtip-titlebar {
+    background-color: #FFEF93;
+}
+
+.qtip-default .qtip-icon {
+    border-color: #CCC;
+    background: #F1F1F1;
+    color: #777;
+}
+
+.qtip-default .qtip-titlebar .qtip-close {
+    border-color: #AAA;
+    color: #111;
+}
+
+.qtip-default {
+    margin-top: -30px;
+    padding: 10px;
+    height: auto!important;
+    background: #112052;
+    border: none;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.qtip-default .title {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.qtip-default:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #112052;
+}
+
+area {
+    cursor: pointer;
+}
+
+p.pl-title {
+    text-align: right;
+}
+
+.back-bt {
+    font-size: 20px;
+    color: #0D1B48;
+}
+
+@media screen and (max-width: 768px) {
+    article.plan-title {
+        margin-bottom: 85px;
+        display: block;
+    }
+    #plan-block .plan {}
+    #plan-block .download {
+        position: absolute;
+        max-width: 100%;
+        width: auto;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0px;
+        outline: dotted 1px #000;
+        font-size: 20px;
+        font-family: "SegoeUIBold";
+        text-decoration: none;
+        padding: 25px 0;
+        background: rgba(17, 32, 82, 0.7);
+        color: #fff;
+    }
+    .block-title {
+        width: 90%;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        font-size: 26px;
+        color: rgba(17, 32, 82, 0.7);
+        padding: 15px;
+    }
+    .block-title:before {
+        display: none;
+    }
+    .block-title:after {
+        display: none;
+    }
+}

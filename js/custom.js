@@ -41,6 +41,13 @@ $('.gallery__sl').slick({
         }
     ]
 });
+
+$('.ban__sl').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true
+});
 // Slick slider
 
 

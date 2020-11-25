@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/jquery.qtip.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
 
 <body id="header">
-
     <!-- header -->
     <header class="header">
         <div class="container">
@@ -45,7 +45,7 @@
                         <span class="header__time--hour">9:00-19:00</span>
                     </div>
                     <div class="header__callback">
-                        <a href="#" class="b24-web-form-popup-btn-7"> Заказать звонок</a>
+                        <a href="#" data-toggle="modal" data-target="#exampleModalCenter"> Заказать звонок</a>
                     </div>
                     <div class="header__language">
                         РУ
@@ -56,7 +56,28 @@
     </header>
     <!-- header -->
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Обратная связь </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="d-flex justify-content-center">
+                            <input type="text" class="callback__form--input" placeholder="Ваше имя" required>
+                            <input type="text" id="phone" class="callback__form--input" placeholder="+996(999)999-999" required>
+                        </div>
+                        <input type="submit" class="callback__form--btn" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- slider -->
     <section class="slider">
         <div class="container">
@@ -66,11 +87,11 @@
                         <h6>Любовь в каждом квадратном метре!</h6>
                     </div>
                     <div class="slide__title">
-                        <h1 class="slide__title--bold">Жилой Дом </h1>
+                        <h1 class="slide__title--bold">Клубный дом </h1>
                         <h1 class="slide__title--regular"> President Palace</h1>
                     </div>
                     <div class="slide__desc">
-                        <p>Жилой дом President Palace — это новый подход к строительству, сочетание современных технологий и умных решений для вашего комфорта и безопасности. <br> С любовью к smart-решениям и родному городу!</p>
+                        <p>Клубный дом President Palace — это новый подход к строительству, сочетание современных технологий и умных решений для вашего комфорта и безопасности. <br> С любовью к smart-решениям и родному городу!</p>
                     </div>
                     <div class="slide__button d-flex justify-content-between align-items-center">
                         <a href="#" class="slide__button--signup b24-web-form-popup-btn-7">Записаться <img src="img/sign_icon.svg" alt=""></a>
@@ -78,14 +99,20 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="img/slider_bg.png " alt=" " class="w-100 ">
+                    <div class="ban__sl">
+                        <div>
+                            <img src="img/slider_bg.png " alt=" " class="w-100 ">
+                        </div>
+                        <div>
+                            <img src="img/slider_bg.png " alt=" " class="w-100 ">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- slider -->
-
 
     <!-- about -->
     <section class="about" id="about">
@@ -112,7 +139,7 @@
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="tabs__content--info">
                         <div class="offset-lg-7 col-lg-5 tabs__content--infobg">
-                            <h1>Жилой дом President Palace</h1>
+                            <h1>Клубный дом President Palace</h1>
                             <div class="tabs__content--desc">
                                 14 этажей, потрясающий вид и уникальные скидки для первых 10 покупателей. Добро пожаловать в President Palace, умный дом премиум-класса в центре Бишкека!
                             </div>
@@ -120,10 +147,10 @@
                                 <div class="tabs__content--number">14</div>
                                 <p class="mb-0">этажей с видом на “Золотой квадрат”</p>
                             </div>
-                            <div class="d-flex align-items-end tabs__content--quantity justify-content-between">
+                            <!-- <div class="d-flex align-items-end tabs__content--quantity justify-content-between">
                                 <div class="tabs__content--number">2</div>
                                 <p class="mb-0 mr-2">этажа бизнес-пространства</p>
-                            </div>
+                            </div> -->
                             <div class="tabs__content--btn">
                                 <a href="#about" class="b24-web-form-popup-btn-7">Купить квартиру</a>
                             </div>
@@ -141,7 +168,6 @@
     </section>
 
     <!-- about -->
-
 
     <!-- gallery -->
     <section class="gallery">
@@ -166,17 +192,11 @@
                         <img src="img/gal3.png" alt="3">
                     </a>
                 </div>
-                <div class="gallery__block">
-                    <a href="img/gal1.png" class="popup-link popup">
-                        <img src="img/gal1.png" alt="4">
-                    </a>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- gallery -->
-
 
     <!-- layout -->
     <section class="layout" id="layout">
@@ -201,7 +221,7 @@
                     <div class="tab-content">
                         <div id="room_1_2" class="tab-pane in active">
                             <div class="row no-gutters layout__room">
-                                <div class="col-lg-7">
+                                <div class="col-lg-6">
                                     <div class="layout__room--desc">
                                         Общая площадь 1-комнатной квартиры
                                         <div class="layout__room--number">
@@ -216,9 +236,7 @@
                                             </li>
                                             <li>
                                                 <p>Балкон</p> <span> 4,15 м2</span> </li>
-                                            <li>
-                                                <p>Гостиная</p> <span> ---- м2</span>
-                                            </li>
+
                                         </ul>
                                         <ul class="layout__room--square d-flex justify-content-between">
                                             <li>
@@ -230,14 +248,11 @@
                                             <li>
                                                 <p>Санузел</p> <span>2,31 м2</span>
                                             </li>
-                                            <li>
-                                                <p>Лоджия</p> <span>---- м2</span>
-                                            </li>
                                         </ul>
                                         <hr>
                                     </div>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center layout__room--img">
                                         <a href="img/layout_1_2.png" class="image-popup-vertical-fit">
                                             <img src="img/layout_1_2.png" alt="" class="w-100">
@@ -248,7 +263,7 @@
                         </div>
                         <div id="room_1_1" class="tab-pane fade">
                             <div class="row no-gutters layout__room">
-                                <div class="col-lg-7">
+                                <div class="col-lg-6">
                                     <div class="layout__room--desc">
                                         Общая площадь 1-комнатной квартиры
                                         <div class="layout__room--number">
@@ -257,9 +272,6 @@
                                         <ul class="layout__room--square d-flex justify-content-between">
                                             <li>
                                                 <p>Хол</p> <span> 8,29 м2</span>
-                                            </li>
-                                            <li>
-                                                <p>Кухня</p> <span> ---- м2</span>
                                             </li>
                                             <li>
                                                 <p>Балкон</p> <span> 3,81 м2</span> </li>
@@ -274,17 +286,11 @@
                                             <li>
                                                 <p>Ванная</p> <span>5,18 м2</span>
                                             </li>
-                                            <li>
-                                                <p>Санузел</p> <span>---- м2</span>
-                                            </li>
-                                            <li>
-                                                <p>Лоджия</p> <span>---- м2</span>
-                                            </li>
                                         </ul>
                                         <hr>
                                     </div>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center layout__room--img">
                                         <a href="img/layout_1_1.png" class="image-popup-vertical-fit">
                                             <img src="img/layout_1_1.png" alt="" class="w-100">
@@ -316,7 +322,7 @@
                     <div class="tab-content">
                         <div id="room_2_1" class="tab-pane in active">
                             <div class="row no-gutters layout__room">
-                                <div class="col-lg-7">
+                                <div class="col-lg-6">
                                     <div class="layout__room--desc">
                                         Общая площадь 2-комнатной квартиры
                                         <div class="layout__room--number">
@@ -345,14 +351,11 @@
                                             <li>
                                                 <p>Санузел</p> <span>2,20 м2</span>
                                             </li>
-                                            <li>
-                                                <p>Лоджия</p> <span>---- м2</span>
-                                            </li>
                                         </ul>
                                         <hr>
                                     </div>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center layout__room--img">
                                         <a href="img/layout2_1.png" class="image-popup-vertical-fit">
                                             <img src="img/layout2_1.png" alt="" class="w-100">
@@ -363,7 +366,7 @@
                         </div>
                         <div id="room_2_2" class="tab-pane fade">
                             <div class="row no-gutters layout__room">
-                                <div class="col-lg-7">
+                                <div class="col-lg-6">
                                     <div class="layout__room--desc">
                                         Общая площадь 2-комнатной квартиры
                                         <div class="layout__room--number">
@@ -392,14 +395,11 @@
                                             <li>
                                                 <p>Санузел</p> <span>2,20 м2</span>
                                             </li>
-                                            <li>
-                                                <p>Лоджия</p> <span>---- м2</span>
-                                            </li>
                                         </ul>
                                         <hr>
                                     </div>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center layout__room--img">
                                         <a href="img/layout2_2.png" class="image-popup-vertical-fit">
                                             <img src="img/layout2_2.png" alt="" class="w-100">
@@ -429,7 +429,7 @@
                     <div class="tab-content">
                         <div id="room_3_1" class="tab-pane in active">
                             <div class="row no-gutters layout__room">
-                                <div class="col-lg-7">
+                                <div class="col-lg-6">
                                     <div class="layout__room--desc">
                                         Общая площадь 2-комнатной квартиры
                                         <div class="layout__room--number">
@@ -465,7 +465,7 @@
                                         <hr>
                                     </div>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center layout__room--img">
                                         <a href="img/layout3_2.png" class="image-popup-vertical-fit">
                                             <img src="img/layout3_2.png" alt="" class="w-100">
@@ -476,7 +476,7 @@
                         </div>
                         <div id="room_3_2" class="tab-pane fade">
                             <div class="row no-gutters layout__room">
-                                <div class="col-lg-7">
+                                <div class="col-lg-6">
                                     <div class="layout__room--desc">
                                         Общая площадь 2-комнатной квартиры
                                         <div class="layout__room--number">
@@ -512,7 +512,7 @@
                                         <hr>
                                     </div>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center layout__room--img">
                                         <a href="img/layout3_1.png" class="image-popup-vertical-fit">
                                             <img src="img/layout3_1.png" alt="" class="w-100">
@@ -542,15 +542,104 @@
     </section>
     <!-- layout -->
 
-
     <!-- visual -->
-    <section class="visaul">
+    <section id="plan-block" class="plan-block layout pt-0">
         <div class="container">
-            <div class="all__heading">
-                визуальный выбор
+            <article class="plan-title">
+                <div class="row justify-content-between">
+                    <div class="all__heading">
+                        визуальный выбор
+                    </div>
+
+                    <div class="col-lg-3">
+                        <p class="pl-title"> <a href="#" class="back-bt">Назад</a></p>
+                    </div>
+
+            </article>
             </div>
         </div>
-        <img src="img/visual.png" alt="" class="w-100">
+
+        <!--Корпуса -->
+        <article id="plan-main" class="plan"><img src="img/plan/plan_main.png" id="plan-main" alt="" usemap="#plan_map" /><map name="plan_map">
+        <area shape="poly" id="3_11float" data-title="3 этаж" data-plan="#plan-3" coords="503, 676, 504, 634, 710, 615, 878, 655, 877, 687, 710, 660"/>
+        <area shape="poly" id="3_11float" data-title="4 этаж" data-plan="#plan-3" coords="504, 633, 504, 594, 709, 570, 879, 622, 877, 653, 710, 614"/>
+        <area shape="poly" id="3_11float" data-title="5 этаж" data-plan="#plan-3" coords="504, 592, 503, 554, 712, 526, 878, 586, 878, 622, 709, 569"/>
+        <area shape="poly" id="3_11float" data-title="6 этаж" data-plan="#plan-3" coords="505, 553, 504, 513, 710, 479, 878, 552, 877, 585, 710, 525"/>
+        <area shape="poly" id="3_11float" data-title="7 этаж" data-plan="#plan-3" coords="504, 512, 503, 467, 709, 433, 879, 519, 878, 551, 709, 478"/>
+        <area shape="poly" id="3_11float" data-title="8 этаж" data-plan="#plan-3" coords="502, 467, 502, 424, 709, 385, 881, 486, 879, 519, 708, 431"/>   
+        <area shape="poly" id="3_11float" data-title="9 этаж" data-plan="#plan-3" coords="501, 423, 502, 384, 710, 336, 884, 456, 882, 485, 709, 384"/>   
+        <area shape="poly" id="3_11float" data-title="10 этаж" data-plan="#plan-3" coords="502, 380, 503, 350, 709, 291, 882, 424, 885, 453, 710, 335"/>   
+        <area shape="poly" id="3_11float" data-title="11 этаж" data-plan="#plan-3" coords="502, 350, 504, 309, 610, 263, 629, 271, 706, 235, 885, 394, 884, 422, 710, 290"/>   
+        <area shape="poly" id="12_13float" data-title="12 этаж" data-plan="#plan-12" coords="505, 307, 506, 272, 605, 225, 629, 234, 698, 190, 880, 356, 880, 386, 708, 236, 630, 271, 609, 261"/>  
+        <area shape="poly" id="12_13float" data-title="13 этаж" data-plan="#plan-12" coords="504, 271, 509, 227, 608, 182, 632, 188, 703, 150, 882, 321, 880, 354, 699, 190, 630, 235, 603, 226"/>  
+        <area shape="poly" id="14float" data-title="14 этаж" data-plan="#plan-14" coords="508, 226, 509, 187, 605, 135, 630, 144, 702, 101, 880, 289, 880, 320, 702, 151, 633, 187, 608, 182"/>  
+        <!-- <area shape="poly" id="15float" data-title="15 этаж" data-plan="#plan-15" coords="507, 185, 505, 166, 545, 135, 545, 103, 610, 57, 628, 69, 711, 11, 794, 125, 792, 153, 814, 180, 830, 173, 882, 241, 880, 286, 700, 101, 629, 144, 604, 133"/>   -->
+    </map>
+
+        </article>
+
+
+
+
+        <!--3-11 этаж -->
+
+
+        <article id="plan-3" style="display: none;" data-back="#plan-main" class="plan ">
+            <img src="img/plan/blog_1/stage_1.jpg" id="plan-image-d21" alt="" usemap="#plan_map-d21" />
+            <map name="plan_map-d21">
+       <area shape="poly" data-title="1-ком.кв(54,84м2 улучшенная планировка)" href="img/plan/blog_1/apartments/54,84.jpg" coords="723, 405, 722, 361, 797, 360, 800, 331, 963, 336, 966, 90, 446, 88, 447, 148, 446, 408" class="cplan html5lightbox"/>
+        <area shape="poly" data-title="1-ком.кв(41,92м2)" href="img/plan/blog_1/apartments/41,92.jpg" coords="1122, 87, 1472, 88, 1472, 151, 1478, 153, 1475, 414, 1199, 409, 1200, 363, 1124, 364" class="cplan html5lightbox"/>
+        <area shape="poly" data-title="1-ком.кв(43,64м2)" href="img/plan/blog_1/apartments/43,64.jpg" coords="446, 406, 447, 663, 452, 666, 452, 735, 792, 735, 794, 406" class="cplan html5lightbox"/>
+        <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_1/apartments/44,02.jpg" coords="794, 405, 1133, 408, 1131, 736, 792, 736" class="cplan html5lightbox"/>
+        <area shape="poly" data-title="1-ком.кв(43,64м2)" href="img/plan/blog_1/apartments/43,64.jpg" coords="1133, 409, 1476, 411, 1473, 736, 1133, 736" class="cplan html5lightbox"/>
+        </map>
+        </article>
+        <!--3-11 этаж -->
+
+        <!--12-13 этаж-->
+
+
+        <article id="plan-12" style="display: none;" data-back="#plan-main" class="plan">
+            <img src="img/plan/blog_1/stage_2.jpg" id="plan-image-12" alt="" usemap="#plan_map-12n" />
+            <map name="plan_map-12n">
+                   <area shape="poly" data-title="1-ком.кв(54,84м2 улучшенная планировка)" href="img/plan/blog_1/apartments/54,84.jpg" coords="723, 405, 722, 361, 797, 360, 800, 331, 963, 336, 966, 90, 446, 88, 447, 148, 446, 408" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(41,92м2)" href="img/plan/blog_1/apartments/41,92.jpg" coords="1122, 87, 1472, 88, 1472, 151, 1478, 153, 1475, 414, 1199, 409, 1200, 363, 1124, 364" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(43,64м2)" href="img/plan/blog_1/apartments/43,64.jpg" coords="446, 406, 447, 663, 452, 666, 452, 735, 792, 735, 794, 406" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_1/apartments/44,02.jpg" coords="794, 405, 1133, 408, 1131, 736, 792, 736" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(43,64м2)" href="img/plan/blog_1/apartments/43,64.jpg" coords="1133, 409, 1476, 411, 1473, 736, 1133, 736" class="cplan html5lightbox"/>
+                    </map>
+        </article>
+        <!--12-13 этаж-->
+
+
+        <!--14 этаж-->
+
+
+        <article id="plan-14" style="display: none;" data-back="#plan-5" class="plan">
+            <img src="img/plan/blog_2/stage_2.jpg" id="plan-image-8" alt="" usemap="#plan_map-52" />
+            <map name="plan_map-52">
+                    <area shape="poly" data-title="3-ком.кв(80,53м2 улучшенная планировка)" href="img/plan/blog_2/apartments/80,53.jpg" coords="3, 541, 4, 238, 251, 239, 248, 355, 204, 355, 203, 391, 88, 393, 88, 542" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="88, 541, 248, 540, 246, 388, 88, 391" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="245, 387, 406, 389, 403, 540, 245, 542" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="2-ком.кв(66,00м2)" href="img/plan/blog_2/apartments/66,00.jpg" coords="325, 387, 324, 237, 485, 240, 481, 540, 403, 539, 404, 388" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="3-ком.кв(81,29м2 улучшенная планировка)" href="img/plan/blog_2/apartments/81,29.jpg" coords="480, 540, 485, 239, 725, 240, 722, 352, 679, 351, 678, 390, 561, 391, 562, 542" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="563, 540, 722, 542, 722, 389, 560, 390" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="724, 541, 881, 540, 881, 540, 881, 540, 880, 391, 879, 390, 722, 390" class="cplan html5lightbox"/>
+                      <area shape="poly" data-title="2-ком.кв(65,27м2)" href="img/plan/blog_2/apartments/65,27.jpg" coords="800, 391, 799, 238, 965, 239, 961, 541, 880, 541, 880, 387" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="3-ком.кв(80,53м2 улучшенная планировка)" href="img/plan/blog_2/apartments/80,53.jpg" coords="965, 239, 961, 540, 1044, 541, 1044, 391, 1158, 391, 1158, 352, 1203, 353, 1204, 239" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="1044, 541, 1204, 542, 1203, 390, 1044, 391" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="1210, 540, 1362, 541, 1362, 389, 1203, 389, 1202, 540" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="2-ком.кв(66,00м2)" href="img/plan/blog_2/apartments/66,00.jpg" coords="1439, 540, 1440, 238, 1279, 239, 1280, 389, 1361, 389, 1360, 540" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="3-ком.кв(81,29м2 улучшенная планировка)" href="img/plan/blog_2/apartments/81,29.jpg" coords="1439, 541, 1519, 540, 1518, 391, 1635, 391, 1636, 355, 1676, 353, 1679, 237, 1440, 237" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="1677, 540, 1676, 390, 1519, 391, 1519, 542" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="1-ком.кв(44,02м2)" href="img/plan/blog_2/apartments/44,02.jpg" coords="1677, 539, 1835, 541, 1836, 390, 1675, 390" class="cplan html5lightbox"/>
+                    <area shape="poly" data-title="2-ком.кв(65,27м2)" href="img/plan/blog_2/apartments/65,27.jpg" coords="1835, 540, 1916, 541, 1917, 237, 1752, 239, 1754, 390, 1837, 391" class="cplan html5lightbox"/>
+            
+            
+                            </map>
+        </article>
+        <!--14 этаж-->
+
     </section>
     <!-- visual -->
 
@@ -571,7 +660,7 @@
                     <div class="project__block--img">
                         <img src="img/project_1.png" alt="" class="w-100 mt-0">
                         <div class="project__block--sale">
-                            скидка 5 %
+                            скидка - 5 %
                         </div>
                     </div>
 
@@ -581,7 +670,7 @@
                     <div class="project__block--img">
                         <img src="img/project_2.png" alt="" class="w-100 mt-0">
                         <div class="project__block--sale">
-                            скидка 5 %
+                            скидка - 5 %
                         </div>
                     </div>
                 </div>
@@ -593,7 +682,7 @@
 
 
     <!-- build -->
-    <section class="build">
+    <section class="build" id="build">
         <div class="container">
             <div class="all__heading">
                 ход строительства
@@ -608,8 +697,8 @@
                     </div>
                 </div>
                 <div class="col-lg-3 build__block--filter">
-                    <a href="#">Все месяца</a>
-                    <a href="#">Все года</a>
+                    <a href="#build">Все месяца</a>
+                    <a href="#build">Все года</a>
                 </div>
             </div>
         </div>
@@ -628,14 +717,36 @@
                             <p>Подпишитесь на телеграм канал!</p>
                         </a>
                     </div>
-                    <div class="callback__form  justify-content-center">
-                        <form action="#">
+                    <div class="callback__form  justify-content-center mt-3">
+                        <script id="bx24_form_inline" data-skip-moving="true">
+                            (function(w, d, u, b) {
+                                w['Bitrix24FormObject'] = b;
+                                w[b] = w[b] || function() {
+                                    arguments[0].ref = u;
+                                    (w[b].forms = w[b].forms || []).push(arguments[0])
+                                };
+                                if (w[b]['forms']) return;
+                                var s = d.createElement('script');
+                                s.async = 1;
+                                s.src = u + '?' + (1 * new Date());
+                                var h = d.getElementsByTagName('script')[0];
+                                h.parentNode.insertBefore(s, h);
+                            })(window, document, 'https://sk-alfa.bitrix24.ru/bitrix/js/crm/form_loader.js', 'b24form');
+
+                            b24form({
+                                "id": "15",
+                                "lang": "ru",
+                                "sec": "hnnx6q",
+                                "type": "inline"
+                            });
+                        </script>
+                        <!-- <form action="#">
                             <div class="d-flex justify-content-center">
                                 <input type="text" class="callback__form--input" placeholder="Ваше имя" required>
-                                <input type="text" class="callback__form--input" placeholder="Ваш e-mail" required>
+                                <input type="text" id="phone_1" class="callback__form--input" placeholder="+996(999)999-999" required>
                             </div>
-                            <input type="submit" class="callback__form--btn" value="Подписаться на обновления">
-                        </form>
+                            <input type="submit" class="callback__form--btn" value="Отправить">
+                        </form> -->
                     </div>
                 </div>
             </div>
@@ -654,7 +765,7 @@
                 </div>
                 <div class="col-lg-2">
                     <h6>Время работы:</h6>
-                    <p>9:00 - 18:00</p>
+                    <p>9:00 - 19:00</p>
                 </div>
                 <div class="col-lg-3">
                     <h6>Адрес головного офиса:</h6>
@@ -719,7 +830,12 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/slick.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/libs/jquery.rwdImageMaps.min.js"></script>
+    <script src="js/libs/jquery.maphilight.min.js"></script>
+    <script src="js/libs/jquery.qtip.js"></script>
+    <script src="js/libs/plan.js"></script>
     <!-- WhatsHelp.io widget -->
     <script type="text/javascript">
         (function() {
@@ -744,15 +860,7 @@
         })();
     </script>
     <!-- /WhatsHelp.io widget -->
-    <script>
-        (function(w, d, u) {
-            var s = d.createElement('script');
-            s.async = true;
-            s.src = u + '?' + (Date.now() / 60000 | 0);
-            var h = d.getElementsByTagName('script')[0];
-            h.parentNode.insertBefore(s, h);
-        })(window, document, 'https://cdn-ru.bitrix24.ru/b14285266/crm/site_button/loader_1_f226v8.js');
-    </script>
+
     <script id="bx24_form_button" data-skip-moving="true">
         (function(w, d, u, b) {
             w['Bitrix24FormObject'] = b;
@@ -776,7 +884,12 @@
             "click": ""
         });
     </script>
-
+    <script>
+        $(function() {
+            $("#phone").mask("+996(888)888-888");
+            $("#phone_1").mask("+996(888)888-888");
+        });
+    </script>
 </body>
 
 </html>

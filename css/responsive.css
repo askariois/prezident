@@ -1,3 +1,9 @@
+@media (max-width: 1200px) {
+    .header__time {
+        display: none;
+    }
+}
+
 @media (max-width: 993px) {
     .header_burger {
         display: block;
@@ -112,5 +118,43 @@
     }
     .mini-tabs {
         bottom: 480px;
+    }
+    .slide__button--signup {
+        position: relative;
+        padding: 10px 10px 5px 9px;
+    }
+    .slide__button--download {
+        margin-right: 0px;
+    }
+    .slide__button {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    .slide__button--signup::after {
+        display: none;
+    }
+    .tabs__content--infobg {
+        padding: 87px 10px 67px 10px;
+    }
+    .tabs__content--quantity p {
+        font-size: 20px;
+        text-align: right;
+    }
+    .tabs__content--btn a {
+        padding: 18px 25px;
+    }
+    .gallery__sl .slick-prev,
+    .gallery__sl .slick-next {
+        top: 45%;
+    }
+    .callback__form .d-flex {
+        flex-direction: column;
+    }
+    .callback__form--input {
+        width: 96%;
+        margin: 0px 10px 24px 10px;
+    }
+    .callback__form form {
+        margin-top: 40px;
     }
 }
